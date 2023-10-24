@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kimmerud Marketing</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="bilder/favicon-32x321.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="bilder/logo.png" alt="Kimmerud Marketing Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="cases.html">Cases</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>  
+
+    <div class="content">
+        <h1>Welcome to Kimmerud Marketing!</h1>
+        <p>Founded in 2023, Kimmerud Marketing is your trusted partner in digital marketing. We specialize in a wide range of services designed to elevate your online presence and drive real results, both in Sweden and on the sunny shores of Malta.</p>
+    
+        <p>Our commitment to excellence knows no boundaries. With a proven track record of success in multiple international markets, we've brought our expertise to businesses in both Sweden and Malta. Our satisfied clients span across various industries, from Stockholm to Valletta.</p>
+    
+        <p>At Kimmerud Marketing, we're passionate about helping your business succeed. Our team of experts excels in:</p>
+        
+        <ul>
+            <li>PPC (Pay-Per-Click) Advertising: We've helped businesses in Sweden and Malta maximize their online visibility and reach the right audience.</li>
+            <li>Paid Social Media Campaigns: Whether it's the streets of Stockholm or the beaches of Malta, we engage audiences effectively with results-driven ad campaigns.</li>
+            <li>Search Engine Optimization (SEO): We've boosted the search engine rankings of clients in both countries, ensuring they stand out in the digital crowd.</li>
+            <li>Paid Organic Marketing: From Scandinavia to the Mediterranean, we've leveraged the power of content marketing and paid advertising to boost online presence and reach new heights.</li>
+        </ul>
+    
+        <p>We understand that every business is unique, which is why our approach is tailored to your specific needs and objectives, no matter where you are. Whether you're looking to enhance your website's visibility in the Nordic region or create a buzz on the Mediterranean island, we have the expertise to make it a reality.</p>
+    
+        <p>Partner with Kimmerud Marketing, and you'll gain access to a team of dedicated professionals who are committed to your success, whether you're based in Sweden or Malta. Let us be your guiding light in the complex world of digital marketing.</p>
+    
+        <p>Your online success story starts here, no matter your location. Contact Kimmerud Marketing today, and take the first step towards achieving your digital marketing goals, whether you're in the heart of Scandinavia or the beautiful Mediterranean.</p>
+    </div>
+    
+
+    <footer>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="company-name">Company name:</label>
+                    <input type="text" id="company-name" name="company-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-name">Contact name:</label>
+                    <input type="text" id="contact-name" name="contact-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone-number">Phone-number:</label>
+                    <input type="tel" id="phone-number" name="phone-number" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+    </footer>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Sign up for our newsletter to stay up to date with the latest news in digital marketing!</h2>
+            <form id="newsletterForm">
+                <input type="email1" id="email" placeholder="Your email address" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <script>
+            // Hitta modal-elementet och stängknappen
+            var modal = document.getElementById("myModal");
+            var closeModal = document.getElementById("closeModal");
+        
+            // När sidan laddas, visa modal-rutan
+            window.onload = function () {
+                modal.style.display = "block";
+            };
+        
+            closeModal.onclick = function () {
+                modal.style.display = "none";
+            };
+        
+            // När användaren skickar formuläret, kan du hantera nyhetsbrevsanmälan här
+            var newsletterForm = document.getElementById("newsletterForm");
+            newsletterForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+                var email = document.getElementById("email").value;
+            });
+        </script>
+
+
+</body>
+</html> 

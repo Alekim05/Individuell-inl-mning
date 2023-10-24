@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Services - Kimmerud Marketing</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="bilder/favicon-32x321.png" type="image/x-icon">
+    <style>
+        .statistics {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .statistic {
+            text-align: center;
+            margin: 0 20px;
+        }
+
+        .statistic h3 {
+            font-size: 24px; /* Större textstorlek */
+            color: #1e3163; /* Textfärg som matchar hemsidans färg */
+        }
+
+        .count {
+            font-size: 36px; /* Större textstorlek för räknaren */
+            color: #1e3163; /* Textfärg som matchar hemsidans färg */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="bilder/logo.png" alt="Kimmerud Marketing Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="cases.html">Cases</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>Our Services</h1>
+        <p>At Kimmerud Marketing, we offer a wide range of services to help your business succeed in the digital world. Whether you're looking to boost your online visibility, engage with your audience on social media, or improve your search engine rankings, we have the expertise to make it happen.</p>
+
+        <h2>Our Services Include:</h2>
+        <ul>
+            <li>PPC (Pay-Per-Click) Advertising</li>
+            <li>Paid Social Media Campaigns</li>
+            <li>Search Engine Optimization (SEO)</li>
+            <li>Paid Organic Marketing</li>
+        </ul>
+
+        <p>Contact us today to learn more about how our services can benefit your business.</p>
+    </div>
+
+    <div class="statistics">
+        <div class="statistic">
+            <h3>Average Increase in Revenue</h3>
+            <div class="count" id="revenueCount">0</div>
+        </div>
+
+        <div class="statistic">
+            <h3>Visitors Gained in Total</h3>
+            <div class="count" id="visitorsCount">0</div>
+        </div>
+
+        <div class="statistic">
+            <h3>Businesses Helped</h3>
+            <div class="count" id="businessCount">0</div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="company-name">Company Name:</label>
+                    <input type="text" id="company-name" name="company-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-name">Contact Name:</label>
+                    <input type="text" id="contact-name" name="contact-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone-number">Phone Number:</label>
+                    <input type="tel" id="phone-number" name="phone-number" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+    <script>
+        // Animerad uppräkning av statistik
+        function animateStatistics() {
+            const revenueCount = document.getElementById("revenueCount");
+            const visitorsCount = document.getElementById("visitorsCount");
+            const businessCount = document.getElementById("businessCount");
+
+            let revenue = 0;
+            let visitors = 0;
+            let businesses = 0;
+
+            const animationInterval = 50; // Millisekunder mellan varje uppdatering
+            const animationDuration = 10000; // Total tid för animationen 
+
+            // Beräkna stegvärden baserat på duration och interval
+            const revenueStep = (1500000 / animationDuration) * animationInterval;
+            const visitorsStep = (503032 / animationDuration) * animationInterval;
+            const businessStep = (143 / animationDuration) * animationInterval;
+
+            // Funktion för att uppdatera räknare och stoppa animationen när målet nås
+            function updateCounts() {
+                revenue += revenueStep;
+                visitors += visitorsStep;
+                businesses += businessStep;
+
+                // Uppdatera visningarna
+                revenueCount.textContent = Math.round(revenue);
+                visitorsCount.textContent = Math.round(visitors);
+                businessCount.textContent = Math.round(businesses);
+
+                // Kontrollera om målet har nåtts
+                if (revenue < 1500000 || visitors < 50000 || businesses < 143) {
+                    requestAnimationFrame(updateCounts);
+                }
+            }
+
+            // Starta animationen
+            updateCounts();
+        }
+
+        // Kör animationsfunktionen när sidan laddas
+        window.onload = animateStatistics;
+    </script>
+</body>
+</html>

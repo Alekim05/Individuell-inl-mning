@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cases - Kimmerud Marketing</title>
+    <link rel="stylesheet" type="text/css" href="slideshow.css">
+    <link rel="icon" href="bilder/favicon-32x321.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="/bilder/logo.png" alt="Kimmerud Marketing Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="cases.html">Cases</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>Our Cases</h1>
+        <div class="slideshow-container">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="mySlides fade">
+                <img src="/bilder/case1.jpg" alt="Case 1 Image">
+                <div class="text"><strong>Anders Brewery:</strong> Kimmerud Marketing has been a game-changer for our brewery. Their digital marketing expertise helped us reach new customers and expand our reach. We couldn't be happier with the results!</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="/bilder/case2.jpg" alt="Case 2 Image">
+                <div class="text"><strong>Mia's Restaurant:</strong> Thanks to Kimmerud Marketing, our restaurant's online presence has never been stronger. Their strategies brought in more diners and increased our visibility. We highly recommend their services!</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="/bilder/case3.jpg" alt="Case 3 Image">
+                <div class="text"><strong>Case 3 - Jonas' Garage:</strong> Kimmerud Marketing has transformed business. Their data-driven approach and tailored solutions improved our online performance. We're extremely satisfied with the outcome.</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <footer>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="company-name">Company name:</label>
+                    <input type="text" id="company-name" name="company-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-name">Contact name:</label>
+                    <input type="text" id="contact-name" name="contact-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone-number">Phone-number:</label>
+                    <input type="tel" id="phone-number" name="phone-number" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </footer>
+
+    <script src="slideshow.js"></script>
+</body>
+</html>
